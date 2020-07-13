@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import {
+  BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  Link
+  Link,
+  NavLink,
+  Redirect
 } from 'react-router-dom';
 
 export class App extends Component {
   render() {
     return (
-      <div>
-        <nav>
-          {/*Aca deben ir los links de navegacion*/}
-        </nav>
-        {/* Aca tienes que agreager algo para que las rutas funcionen*/}
-      </div>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/Page1" >Page1</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Page2" >Page2</NavLink>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            <Redirect exact from='/' to='/Page1' />
+            <Route path='/Page1'>
+              <Page1 />
+            </Route>
+            <Route path='/Page2'>
+              <Page2 />
+            </Route>
+            <Route path='/'>
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+
     )
   }
 }
