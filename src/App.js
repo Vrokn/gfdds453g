@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
   Redirect
 } from 'react-router-dom';
 
@@ -14,10 +15,10 @@ export class App extends Component {
           <nav>
             <ul>
               <li>
-                <a href="/Page1" >Page1</a>
+                <Link to="/Page1" >Page1</Link>
               </li>
               <li>
-                <a href="/Page2" >Page2</a>
+                <Link to="/Page2" >Page2</Link>
               </li>
             </ul>
           </nav>
