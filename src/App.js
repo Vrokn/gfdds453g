@@ -16,10 +16,10 @@ export class App extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/Page1" >Page1</NavLink>
+                <Link to="/Page1" >Page1</NavLink>
               </li>
               <li>
-                <NavLink to="/Page2" >Page2</NavLink>
+                <Link to="/Page2" >Page2</NavLink>
               </li>
             </ul>
           </nav>
